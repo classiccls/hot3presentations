@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Game-devowy - The Dungeon | Hub of Talents 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide Navigation -->
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">10</span>
+        </div>
+        
+        <div class="navigation-controls">
+            <button class="btn btn--secondary" id="prev-btn" onclick="goToPreviousSlide()" disabled>← Poprzedni</button>
+            <button class="btn btn--secondary" id="next-btn" onclick="goToNextSlide()">Następny →</button>
+        </div>
+
+        <!-- Slide 1: Title Page -->
+        <div class="slide active" id="slide-1">
+            <div class="slide-content title-slide">
+                <h1>Startup Game-devowy</h1>
+                <h2>The Dungeon</h2>
+                <div class="subtitle">
+                    <p>Hub of Talents 3</p>
+                    <p>Białostocki Park Technologiczny</p>
+                </div>
+                <div class="team-names">
+                    <p><strong>Tomasz Czyrski</strong> • <strong>Paweł Łapicz</strong></p>
+                </div>
+                <div class="event-info">
+                    <p>Wrzesień 2024 • Białystok</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Extended Team Presentation -->
+        <div class="slide" id="slide-2">
+            <div class="slide-content">
+                <h2>Przedstawienie Zespołu</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h3>Tomasz Czyrski</h3>
+                        <p class="role">Pomysłodawca & Game Designer</p>
+                        <div class="team-details">
+                            <h4>Wykształcenie & Doświadczenie:</h4>
+                            <ul>
+                                <li>Absolwent <strong>matematyki</strong> oraz <strong>matematycznych metod informatyki</strong></li>
+                                <li>Rozszerzony kurs z <strong>teorii gier</strong> na poziomie akademickim</li>
+                                <li>Zawodowo: <strong>analiza danych</strong> - doświadczenie w pracy z danymi i statystykami</li>
+                                <li>Wieloletni pasjonat wszystkich rodzajów gier (tradycyjne, planszowe, wideo)</li>
+                            </ul>
+                            
+                            <h4>Umiejętności Techniczne:</h4>
+                            <ul>
+                                <li>Projektowanie mechanik gier i systemów rozgrywki</li>
+                                <li>Tworzenie grafik koncepcyjnych i dokumentacji projektowej</li>
+                                <li>Podstawy programowania w <strong>najpopularniejszych językach obiektowych</strong></li>
+                                <li>Doświadczenie w tworzeniu projektów gier planszowych i komputerowych</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <h3>Paweł Łapicz</h3>
+                        <p class="role">Business Manager & Strategist</p>
+                        <div class="team-details">
+                            <h4>Wykształcenie & Doświadczenie:</h4>
+                            <ul>
+                                <li><strong>Magister Analityki Gospodarczej</strong> - Uniwersytet Łódzki</li>
+                                <li>Zawodowo: <strong>analityk oraz doświadczony negocjator</strong></li>
+                                <li>Miłośnik sportu i rywalizacji - rozumie psychologię konkurowania</li>
+                                <li>Aktywny obserwator i analityk <strong>trendów giełdowych</strong></li>
+                            </ul>
+                            
+                            <h4>Umiejętności Biznesowe:</h4>
+                            <ul>
+                                <li><strong>Sprzedaż i negocjacje</strong> - udowodnione sukcesy w branży</li>
+                                <li>Sprawny <strong>umysł biznesowy</strong> i myślenie strategiczne</li>
+                                <li>Doświadczenie w analizie rynku i identyfikacji okazji</li>
+                                <li>Umiejętność budowania relacji biznesowych i partnerskich</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Extended Team History -->
+        <div class="slide" id="slide-3">
+            <div class="slide-content">
+                <h2>Historia Zespołu</h2>
+                <div class="history-content">
+                    <div class="history-section">
+                        <h3>🤝 Wieloletnia Znajomość i Wspólna Wizja</h3>
+                        <p>Znajomość z Pawłem trwa <strong>ponad półtorej dekady</strong>. Już w liceum rozmawialiśmy o wspólnym założeniu działalności. Zawsze dobrze się dogadywaliśmy i skutecznie współpracowaliśmy w różnych projektach.</p>
+                        <p>Przez lata każdy z nas nabierał doświadczenia w swojej branży, przygotowując się do realizacji wspólnych planów biznesowych.</p>
+                    </div>
+                    
+                    <div class="history-section">
+                        <h3>🎯 Rozwój Specjalistycznego Doświadczenia</h3>
+                        <p><strong>Tomasz</strong> przez lata rozwijał się jako gracz oraz twórca gier:</p>
+                        <ul>
+                            <li>Pogłębianie wiedzy o mechanikach i psychologii gier</li>
+                            <li>Analiza najlepszych tytułów indie na rynku</li>
+                            <li>Rozwijanie umiejętności graficznych i projektowych</li>
+                        </ul>
+                        
+                        <p><strong>Paweł</strong> nabierał doświadczenia jako sprzedawca i negocjator:</p>
+                        <ul>
+                            <li>Zrozumienie potrzeb klientów i rynku</li>
+                            <li>Budowanie strategii sprzedażowych</li>
+                            <li>Analiza trendów gospodarczych i inwestycyjnych</li>
+                        </ul>
+                    </div>
+
+                    <div class="history-section">
+                        <h3>🎲 Hobbistyczne Projekty Gier Planszowych</h3>
+                        <p>Przez lata hobbistycznie zajmowałem się projektowaniem gier, głównie planszowych. Kilka z nich ujrzało światło dzienne w formie <strong>grywalnych prototypów</strong>:</p>
+                        
+                        <div class="game-projects">
+                            <div class="game-project">
+                                <h4>DiceCraft</h4>
+                                <div class="game-image-placeholder">
+                                    <p>📷 Załącz: dice_1.jpg, dice_2.jpg</p>
+                                </div>
+                                <p>Innowacyjna gra wykorzystująca system kostek z unikalnymi mechanikami kombinacji. Z każdą iteracją rozwijałem umiejętności projektowania mechanik i równoważenia rozgrywki.</p>
+                            </div>
+                            
+                            <div class="game-project">
+                                <h4>Necro Chess</h4>
+                                <div class="game-image-placeholder">
+                                    <p>📷 Załącz: necro_1.jpg, necro_2.jpg</p>
+                                </div>
+                                <p>Unikalne podejście do klasycznej gry w szachy z elementami fantasy. Projekt wymagał głębokiego zrozumienia strategii i taktyki gier.</p>
+                            </div>
+                        </div>
+                        
+                        <p><strong>Rozwój przez prezentacje:</strong> Gry prezentowałem najpierw wśród znajomych, później na <strong>Kole Gier Planszowych Politechniki Białostockiej</strong>. Z każdą kolejną grą odbiór był coraz lepszy, a entuzjazm graczy większy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: NEW - Startup GameDev Vision -->
+        <div class="slide" id="slide-4">
+            <div class="slide-content">
+                <h2>🚀 Nasza Wizja: Startup GameDevowy Nowej Generacji</h2>
+                
+                <div class="vision-intro">
+                    <p><strong>Nasz pomysł</strong> to założenie nowoczesnego startupu zajmującego się tworzeniem gier – zarówno komputerowych, jak i planszowych – z silnym akcentem na innowacyjność, etykę i rozwój kreatywny. Dostrzegając dynamiczny rozwój branży gier niezależnych na świecie i w Polsce, chcemy budować własną markę, która nie tylko odpowiada na aktualne potrzeby rynku, ale wyznacza nowe standardy jakościowe i edukacyjne.</p>
+                </div>
+
+                <div class="industry-facts">
+                    <h3>📊 Kluczowe Fakty Branżowe 2024:</h3>
+                    
+                    <div class="facts-grid">
+                        <div class="fact-section global">
+                            <h4>🌍 Globalny Rynek Gier:</h4>
+                            <div class="stats-showcase">
+                                <div class="stat-highlight primary">
+                                    <span class="stat-number">187,7 mld USD</span>
+                                    <span class="stat-label">przychodów (+2,1% rok do roku)</span>
+                                </div>
+                                <div class="stat-highlight success">
+                                    <span class="stat-number">3,42 miliarda</span>
+                                    <span class="stat-label">graczy na świecie (+4,5% wzrost)</span>
+                                </div>
+                                <div class="stat-highlight warning">
+                                    <span class="stat-number">92,6 mld USD</span>
+                                    <span class="stat-label">Mobile gaming (49% całego rynku)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fact-section poland">
+                            <h4>🇵🇱 Polski GameDev:</h4>
+                            <div class="stats-showcase">
+                                <div class="stat-highlight info">
+                                    <span class="stat-number">494 firmy</span>
+                                    <span class="stat-label">game-devowe w Polsce</span>
+                                </div>
+                                <div class="stat-highlight success">
+                                    <span class="stat-number">15 290</span>
+                                    <span class="stat-label">zatrudnionych (+16% rok do roku!)</span>
+                                </div>
+                                <div class="stat-highlight primary">
+                                    <span class="stat-number">🏆 Net eksporter</span>
+                                    <span class="stat-label">więcej eksportujemy niż importujemy</span>
+                                </div>
+                                <div class="stat-highlight warning">
+                                    <span class="stat-number">20+ mln</span>
+                                    <span class="stat-label">graczy w Polsce</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fact-section challenges">
+                            <h4>⚠️ Wyzwania Indie:</h4>
+                            <div class="stats-showcase">
+                                <div class="stat-highlight error">
+                                    <span class="stat-number">2,6%</span>
+                                    <span class="stat-label">gier indie zarabia ponad milion USD</span>
+                                </div>
+                                <div class="stat-highlight error">
+                                    <span class="stat-number">56%</span>
+                                    <span class="stat-label">gier na Steam nie zarabia nawet 1000 USD</span>
+                                </div>
+                                <div class="stat-highlight error">
+                                    <span class="stat-number">500 USD</span>
+                                    <span class="stat-label">mediana przychodów</span>
+                                </div>
+                                <div class="stat-highlight error">
+                                    <span class="stat-number">70%</span>
+                                    <span class="stat-label">gier indie to komercyjne porażki</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-revolution">
+                        <h4>💡 Rewolucja Technologiczna 2024:</h4>
+                        <div class="tech-stats">
+                            <div class="tech-item">
+                                <span class="tech-icon">🤖</span>
+                                <strong>62% deweloperów</strong> wykorzystuje narzędzia AI
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🎮</span>
+                                <strong>Unity: 51%</strong> gier na Steam
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">⚡</span>
+                                <strong>Unreal: 28%</strong> udziału
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🆓</span>
+                                <strong>Godot: 5%</strong> (darmowy i rosnący)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="our-response">
+                    <h3>💡 Nasza Odpowiedź:</h3>
+                    <p>Planujemy rozwijać zespół w regionie o dużym potencjale, opierając się o lokalnych absolwentów uczelni technicznych, biznesowych oraz pasjonatów gier. Wierzymy, że dzięki świeżemu spojrzeniu, wykorzystaniu nowoczesnych technologii (AI, generatory grafik, nowoczesne silniki), kooperacji między światem biznesu a techniką i naciskowi na wysoką jakość rozgrywki jesteśmy w stanie zaproponować produkty, które podbiją nie tylko rynek polski, ale też zagraniczny.</p>
+                    
+                    <div class="value-proposition">
+                        <h4>🎯 Nasza Filozofia:</h4>
+                        <p><strong>Chcemy tworzyć gry przemyślane – logiczne i uczciwe, bazujące na decyzjach gracza, a nie ślepym losie czy mikrotransakcjach.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Market Data & Technology (previously slide 4) -->
+        <div class="slide" id="slide-5">
+            <div class="slide-content">
+                <h2>Rynek Indie Games: Liczby i Fakty</h2>
+                
+                <div class="market-stats">
+                    <div class="stat-section">
+                        <h3>📈 Eksplozywny Wzrost Rynku Indie</h3>
+                        <div class="stats-grid">
+                            <div class="stat-box highlight">
+                                <h4>4,85 mld USD</h4>
+                                <p>Wartość rynku gier indie w 2024</p>
+                            </div>
+                            <div class="stat-box highlight">
+                                <h4>9,55 mld USD</h4>
+                                <p>Prognoza na 2030 rok</p>
+                            </div>
+                            <div class="stat-box success">
+                                <h4>8,5% CAGR</h4>
+                                <p>Roczny wskaźnik wzrostu</p>
+                            </div>
+                        </div>
+                        
+                        <h4>🏆 Przykłady Spektakularnych Sukcesów:</h4>
+                        <ul>
+                            <li><strong>Slay the Spire:</strong> Ponad 66 mln USD przychodów</li>
+                            <li><strong>Vampire Survivors:</strong> 20+ mln USD przy minimalnych kosztach (6+ mln kopii)</li>
+                            <li>Oba tytuły stworzone przez małe zespoły indie</li>
+                        </ul>
+                    </div>
+
+                    <div class="stat-section">
+                        <h3>🇵🇱 Rynek Polski - Ogromny Potencjał</h3>
+                        <div class="poland-stats">
+                            <div class="stat-box">
+                                <h4>5,94 mln</h4>
+                                <p>Użytkowników gier mobilnych w Polsce (2024)</p>
+                            </div>
+                            <div class="stat-box">
+                                <h4>91%</h4>
+                                <p>Penetracja smartfonów w grupie 15-29 lat</p>
+                            </div>
+                            <div class="stat-box warning">
+                                <h4>Brak konkurencji</h4>
+                                <p>w Polsce wschodniej</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-section">
+                        <h3>🛠️ Rewolucja Technologiczna</h3>
+                        <div class="tech-stats">
+                            <h4>Silniki gier na Steam (2024):</h4>
+                            <ul>
+                                <li><strong>Unity:</strong> 51% wszystkich gier</li>
+                                <li><strong>Unreal Engine:</strong> 28% udziału</li>
+                                <li><strong>Godot:</strong> 5% (darmowy i rosnący)</li>
+                                <li>Spadek silników własnościowych: z 71% (2012) do 13% (2024)</li>
+                            </ul>
+                            
+                            <div class="ai-revolution">
+                                <h4>🤖 Rewolucja AI w Game Dev:</h4>
+                                <p><strong>62% deweloperów</strong> już wykorzystuje narzędzia AI w produkcji (Unity Report 2024). Nigdy nie było tak łatwo i tanio tworzyć gry!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Employment & Social Impact (previously slide 5) -->
+        <div class="slide" id="slide-6">
+            <div class="slide-content">
+                <h2>Miejsca Pracy i Wpływ Społeczny</h2>
+                
+                <div class="employment-section">
+                    <div class="local-talent">
+                        <h3>🎓 Ogromny Potencjał Lokalnych Talentów</h3>
+                        <div class="education-stats">
+                            <div class="stat-box highlight">
+                                <h4>6000+</h4>
+                                <p>Absolwentów informatyki Politechniki Białostockiej w 35 lat</p>
+                            </div>
+                            <div class="stat-box">
+                                <h4>15000+</h4>
+                                <p>Osób zatrudnionych w branży gier w Polsce</p>
+                            </div>
+                            <div class="stat-box">
+                                <h4>500+</h4>
+                                <p>Firm game-devowych w Polsce</p>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-opportunity">
+                            <h4>🎯 Wyzwanie = Okazja:</h4>
+                            <ul>
+                                <li><strong>Problem:</strong> Trudności z zatrudnieniem młodych programistów (juniorów) w regionie</li>
+                                <li><strong>Rozwiązanie:</strong> Branża gier jako idealne miejsce startu dla juniorów w IT</li>
+                                <li><strong>Korzyści:</strong> Gry pozostają atrakcyjne dla młodych ludzi - naturalna motywacja</li>
+                                <li><strong>Współpraca:</strong> Kontakt z Akademickim Kołem Tworzenia Gier Vector</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="recruitment-strategy">
+                        <h3>👥 Strategia Rekrutacji</h3>
+                        <div class="strategy-points">
+                            <div class="strategy-item">
+                                <h4>Studenci i Absolwenci</h4>
+                                <p>Rekrutacja z białostockich uczelni - Politechnika, Uniwersytet w Białymstoku</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h4>Program Stażowy</h4>
+                                <p>Oferowanie praktyk i staży dla studentów IT - wzajemne korzyści</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h4>Współpraca z Uczelniami</h4>
+                                <p>Partnerstwo z kołami naukowymi i studentami zainteresowanymi game devem</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regional-impact">
+                        <h3>🌍 Pozytywny Wpływ na Region</h3>
+                        <ul>
+                            <li>Tworzenie nowoczesnych miejsc pracy w Polsce wschodniej</li>
+                            <li>Zatrzymanie talentów w regionie - przeciwdziałanie emigracji</li>
+                            <li>Budowanie ekosystemu technologicznego w Białymstoku</li>
+                            <li>Promocja regionu jako centrum innowacji</li>
+                            <li>Eksport polskiego produktu bez ograniczeń geograficznych</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Problem of Predatory Gaming (previously slide 6) -->
+        <div class="slide" id="slide-7">
+            <div class="slide-content">
+                <h2>Problem Gier Predatory vs. Nasza Filozofia</h2>
+                
+                <div class="predatory-analysis">
+                    <div class="problem-section">
+                        <h3>⚠️ Alarmujące Statystyki Rynku Gacha i Loot Box</h3>
+                        <div class="predatory-stats">
+                            <div class="stat-box warning">
+                                <h4>0,53 mld USD</h4>
+                                <p>Rynek gier gacha w 2025</p>
+                            </div>
+                            <div class="stat-box warning">
+                                <h4>1,09 mld USD</h4>
+                                <p>Prognoza na 2034 (+106%!)</p>
+                            </div>
+                            <div class="stat-box error">
+                                <h4>50%+</h4>
+                                <p>Młodych graczy gacha wykazuje zachowania hazardowe</p>
+                            </div>
+                        </div>
+
+                        <div class="manipulation-data">
+                            <h4>🎰 Mechaniki Manipulacji:</h4>
+                            <ul>
+                                <li><strong>52,7% graczy</strong> przyciągają nagrody losowe</li>
+                                <li><strong>41,3% skarg</strong> dotyczy mechanik "pay-to-win"</li>
+                                <li><strong>30% przychodów</strong> z loot box pochodzi od graczy zagrożonych uzależnieniem</li>
+                                <li>Celowa eksploatacja dzieci i osób podatnych na uzależnienia</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="our-solution">
+                        <h3>✅ Nasza Odpowiedź: Uczciwa Rozgrywka</h3>
+                        <div class="solution-principles">
+                            <div class="principle">
+                                <h4>🎯 Gry Logiczne i Akcji</h4>
+                                <p>Skupiamy się na mechanikach wymagających umiejętności i strategii, nie szczęścia</p>
+                            </div>
+                            <div class="principle">
+                                <h4>🧠 Decyzyjność Gracza</h4>
+                                <p>Sukces zależy od decyzji gracza, nie od algorytmów losowych</p>
+                            </div>
+                            <div class="principle highlight">
+                                <h4>🚫 Zero Hazardu</h4>
+                                <p><strong>NIGDY nie tworzymy gier hazardowych ani losowych</strong> - to nasz kluczowy punkt różnicujący</p>
+                            </div>
+                            <div class="principle">
+                                <h4>💰 Uczciwy Model Biznesowy</h4>
+                                <p>Przejrzyste ceny, brak ukrytych kosztów, wartość za pieniądze</p>
+                            </div>
+                        </div>
+
+                        <div class="market-positioning">
+                            <h4>🎮 Pozycjonowanie Rynkowe:</h4>
+                            <p>W czasie gdy rynek zalewa fala gier predatory, oferujemy <strong>alternatywę</strong> dla graczy ceniących uczciwość i umiejętności. To nasza <strong>przewaga konkurencyjna</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Polish Culture & Global Market (previously slide 7) -->
+        <div class="slide" id="slide-8">
+            <div class="slide-content">
+                <h2>Polska Kultura na Świat</h2>
+                
+                <div class="culture-section">
+                    <div class="success-story">
+                        <h3>🏆 Przykład Wiedźmina - Droga do Sukcesu</h3>
+                        <div class="witcher-impact">
+                            <ul>
+                                <li><strong>CD Projekt</strong> stał się jedną z najcenniejszych firm gamingowych Europy</li>
+                                <li>Serial Netflix obejrzało <strong>ponad 76 mln</strong> gospodarstw domowych</li>
+                                <li>Słowiańska mitologia stała się <strong>rozpoznawalna globalnie</strong></li>
+                                <li>Boost dla polskiej kultury i turystyki</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="our-opportunity">
+                        <h3>🌟 Nasza Unikalna Okazja</h3>
+                        <div class="opportunity-grid">
+                            <div class="opportunity-item">
+                                <h4>Niewyeksplorowana Nisza</h4>
+                                <p>Słowiańska mitologia to <strong>niewyeksplorowany sektor fantasy</strong> z ogromnym potencjałem międzynarodowym</p>
+                            </div>
+                            <div class="opportunity-item">
+                                <h4>Edukacyjny Aspekt</h4>
+                                <p>Okazja do <strong>edukacji młodych</strong> o bogatej kulturze i tradycji polskiej</p>
+                            </div>
+                            <div class="opportunity-item">
+                                <h4>Przewaga Pierwszego Ruchu</h4>
+                                <p><strong>Brak małych gier indie</strong> z polskimi światami - pionierska pozycja</p>
+                            </div>
+                            <div class="opportunity-item">
+                                <h4>Globalny Zasięg</h4>
+                                <p>Cyfrowa dystrybucja bez granic geograficznych - <strong>cały świat jako rynek</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cultural-elements">
+                        <h3>🏛️ Elementy Kulturowe w Naszych Grach</h3>
+                        <div class="cultural-features">
+                            <div class="feature">
+                                <h4>Mitologia Słowiańska</h4>
+                                <p>Bogate bestiarium: domovoi, rusalki, leszy, strzygi</p>
+                            </div>
+                            <div class="feature">
+                                <h4>Polskie Legendy</h4>
+                                <p>Adaptacja lokalnych podań i historii</p>
+                            </div>
+                            <div class="feature">
+                                <h4>Współczesne Interpretacje</h4>
+                                <p>Nowoczesne podejście do tradycyjnych motywów</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="export-potential">
+                        <h3>🚀 Potencjał Eksportowy</h3>
+                        <ul>
+                            <li><strong>Małe nakłady - wielotysięczne sprzedaże</strong> dzięki cyfrowej dystrybucji</li>
+                            <li>Przykłady indie sukcesu przy budżetach poniżej 100k USD</li>
+                            <li>Potencjał wielokrotnego zwrotu z inwestycji</li>
+                            <li>Budowanie marki "Made in Poland" w branży gier</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Enhanced First Product (previously slide 8) -->
+        <div class="slide" id="slide-9">
+            <div class="slide-content">
+                <h2>Pierwszy Produkt - "The Dungeon"</h2>
+                
+                <div class="game-detailed-overview">
+                    <div class="game-concept">
+                        <h3>🎮 Koncepcja Gry</h3>
+                        <div class="concept-grid">
+                            <div class="concept-item">
+                                <h4>Gatunek</h4>
+                                <p>Logiczna gra turowa dla jednego gracza</p>
+                            </div>
+                            <div class="concept-item">
+                                <h4>Cel</h4>
+                                <p>Przemierzenie lochów i pokonanie końcowego bossa</p>
+                            </div>
+                            <div class="concept-item">
+                                <h4>Inspiracje</h4>
+                                <p>Mechanika progresji: <strong>Slay The Spire</strong><br>System walki: <strong>The Bazaar</strong></p>
+                            </div>
+                            <div class="concept-item">
+                                <h4>Platforma</h4>
+                                <p>PC, Mobile, potencjalnie konsole</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="unique-mechanics">
+                        <h3>⚙️ Unikalna Mechanika - "Maszyny Goldberga"</h3>
+                        <p>Serce gry to system <strong>wzajemnych oddziaływań przedmiotów</strong>. Gracz buduje złożone kombinacje, gdzie każdy element wpływa na działanie innych, tworząc łańcuchy reakcji.</p>
+                        
+                        <div class="mechanics-example">
+                            <h4>🔗 Przykład Zaawansowanej Synergii:</h4>
+                            <div class="synergy-chain">
+                                <div class="item-card">
+                                    <h5>Klinga Wampira</h5>
+                                    <p>• 3 obrażenia<br>• +1 pancerz za trafienie<br>• +1 życie za zabicie</p>
+                                </div>
+                                <div class="synergy-arrow">→</div>
+                                <div class="item-card">
+                                    <h5>Pancerz Odbicia</h5>
+                                    <p>• 5 pancerza<br>• Za 10 pancerza: +2 dmg<br>• Za 20 pancerza: odbicie 50%</p>
+                                </div>
+                                <div class="synergy-arrow">→</div>
+                                <div class="item-card">
+                                    <h5>Amulet Mocy</h5>
+                                    <p>• Za każde życie: +1 dmg<br>• Za każde odbicie: +2 życia</p>
+                                </div>
+                            </div>
+                            <div class="result">
+                                <strong>Rezultat:</strong> Samowzmacniający się cykl, gdzie walka czyni gracza coraz silniejszym!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="design-philosophy">
+                        <h3>🎯 Filozofia Designu</h3>
+                        <div class="philosophy-points">
+                            <div class="philosophy-item highlight">
+                                <h4>Prostota Wykonania</h4>
+                                <p>Łatwy w zaprojektowaniu i zaprogramowaniu <strong>pierwszy projekt</strong> - minimalizacja ryzyka technicznego</p>
+                            </div>
+                            <div class="philosophy-item">
+                                <h4>Złożoność przez Kombinacje</h4>
+                                <p><strong>Tysiące różnych strategii</strong> powstających z prostych elementów</p>
+                            </div>
+                            <div class="philosophy-item">
+                                <h4>Progresywna Trudność</h4>
+                                <p>Więcej odblokowanych przedmiotów = większa złożoność decyzji</p>
+                            </div>
+                            <div class="philosophy-item">
+                                <h4>Różnorodność Strategii</h4>
+                                <p><strong>Wiele metod</strong> pokonania tych samych przeciwników</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="production-advantages">
+                        <h3>💡 Zalety Produkcyjne</h3>
+                        <ul>
+                            <li><strong>Niski budżet produkcji</strong> - proste grafiki 2D, focus na gameplay</li>
+                            <li><strong>Krótki czas developmentu</strong> - 6-12 miesięcy do MVP</li>
+                            <li><strong>Łatwe testowanie</strong> - mechaniki można testować na papierze</li>
+                            <li><strong>Skalowalna zawartość</strong> - łatwo dodawać nowe przedmioty</li>
+                            <li><strong>Silna replayability</strong> - każda rozgrywka inna</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Enhanced Future Plans & Summary (previously slide 9) -->
+        <div class="slide" id="slide-10">
+            <div class="slide-content">
+                <h2>Plany Przyszłości i Podsumowanie</h2>
+                
+                <div class="future-strategy">
+                    <div class="roadmap-detailed">
+                        <h3>🚀 Strategiczna Mapa Rozwoju</h3>
+                        
+                        <div class="phase phase-1">
+                            <h4>FAZA 1: Podstawy (0-18 miesięcy)</h4>
+                            <div class="phase-content">
+                                <div class="phase-goals">
+                                    <h5>Cele:</h5>
+                                    <ul>
+                                        <li>Wydanie "The Dungeon" na PC i Mobile</li>
+                                        <li>Zbudowanie zespołu 3-5 osób</li>
+                                        <li>Osiągnięcie 10k+ sprzedanych kopii</li>
+                                        <li>Budowanie community i bazy fanów</li>
+                                    </ul>
+                                </div>
+                                <div class="phase-focus">
+                                    <h5>Focus:</h5>
+                                    <p>Proste projekty indie, rozwój umiejętności, etablowanie marki</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="phase phase-2">
+                            <h4>FAZA 2: Ekspansja (18-36 miesięcy)</h4>
+                            <div class="phase-content">
+                                <div class="phase-goals">
+                                    <h5>Cele:</h5>
+                                    <ul>
+                                        <li>Przejście na konsole (Nintendo Switch, Steam Deck)</li>
+                                        <li>Bardziej złożone projekty z polską mitologią</li>
+                                        <li>Zespół 8-12 osób</li>
+                                        <li>100k+ sprzedanych kopii łącznie</li>
+                                    </ul>
+                                </div>
+                                <div class="innovative-project">
+                                    <h5>🌍 Rywalizacyjna Gra GPS:</h5>
+                                    <p>Gra czasu rzeczywistego wykorzystująca lokalizację do rywalizacji między graczami w prawdziwym świecie</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="phase phase-3 highlight">
+                            <h4>FAZA 3: Innowacje (36+ miesięcy)</h4>
+                            <div class="breakthrough-project">
+                                <h5>💎 Przełomowy Projekt: Gry na Smartwatche dla Biegaczy</h5>
+                                <div class="project-details">
+                                    <p><strong>Koncepcja:</strong> Pierwsza gra RPG sterowana przebiegniętymi kilometrami</p>
+                                    <div class="features">
+                                        <ul>
+                                            <li><strong>Pokonywanie przeciwników</strong> przez przebieganą odległość</li>
+                                            <li><strong>Rywalizacja</strong> między biegaczami w czasie rzeczywistym</li>
+                                            <li><strong>Progression system</strong> oparty na fitness achievements</li>
+                                            <li><strong>Motywacja do aktywności</strong> przez gamifikację</li>
+                                        </ul>
+                                    </div>
+                                    <p class="innovation-note"><strong>Pionierskie rozwiązanie:</strong> Łączenie fitness z RPG w niewyeksploatowanym segmencie smartwatch gaming</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="summary-cta">
+                        <h3>🎯 Nasza Wizja</h3>
+                        <p class="vision-statement">Tworzymy innowacyjne gry, które łączą <strong>polską kulturę</strong> z <strong>nowoczesnymi technologiami</strong>, oferując uczciwe i angażujące doświadczenia dla graczy na całym świecie.</p>
+
+                        <div class="investment-proposition">
+                            <h4>💰 Propozycja Inwestycyjna</h4>
+                            <div class="investment-highlights">
+                                <div class="highlight-item">
+                                    <strong>Doświadczony Zespół</strong><br>
+                                    Połączenie pasji do gier z umiejętnościami biznesowymi
+                                </div>
+                                <div class="highlight-item">
+                                    <strong>Rosnący Rynek</strong><br>
+                                    Indie gaming: 4,85 mld USD → 9,55 mld USD
+                                </div>
+                                <div class="highlight-item">
+                                    <strong>Lokalny Monopol</strong><br>
+                                    Brak konkurencji w Polsce wschodniej
+                                </div>
+                                <div class="highlight-item">
+                                    <strong>Unikalna Pozycja</strong><br>
+                                    Polska kultura + uczciwa rozgrywka
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="call-to-action">
+                            <h4>🤝 Zaproszenie do Współpracy</h4>
+                            <p>Szukamy inwestorów i partnerów, którzy podzielają naszą wizję tworzenia innowacyjnych gier z polskim charakterem dla światowego rynku.</p>
+                            
+                            <div class="contact-info">
+                                <p><strong>Kontakt:</strong></p>
+                                <p>Tomasz Czyrski • Paweł Łapicz</p>
+                                <p>Hub of Talents 3 • Białostocki Park Technologiczny</p>
+                                <p><em>"Przyszłość gamingu zaczyna się tutaj, w Białymstoku."</em></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables for slide management
+        let currentSlide = 1;
+        const totalSlides = 10;
+
+        // Global functions for inline onclick handlers
+        function goToNextSlide() {
+            console.log('Next slide function called');
+            if (currentSlide < totalSlides) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function goToPreviousSlide() {
+            console.log('Previous slide function called');
+            if (currentSlide > 1) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        function showSlide(slideNumber) {
+            console.log('Showing slide:', slideNumber);
+            
+            if (slideNumber < 1 || slideNumber > totalSlides) {
+                return;
+            }
+
+            // Hide all slides
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // Show current slide
+            const targetSlide = document.getElementById(`slide-${slideNumber}`);
+            if (targetSlide) {
+                targetSlide.classList.add('active');
+            }
+
+            currentSlide = slideNumber;
+            updateSlideCounter();
+            updateNavigationButtons();
+        }
+
+        function updateSlideCounter() {
+            const currentSlideDisplay = document.getElementById('current-slide');
+            const totalSlidesDisplay = document.getElementById('total-slides');
+            
+            if (currentSlideDisplay) {
+                currentSlideDisplay.textContent = currentSlide;
+            }
+            if (totalSlidesDisplay) {
+                totalSlidesDisplay.textContent = totalSlides;
+            }
+        }
+
+        function updateNavigationButtons() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            
+            if (prevBtn) {
+                prevBtn.disabled = currentSlide <= 1;
+                if (currentSlide <= 1) {
+                    prevBtn.style.opacity = '0.5';
+                } else {
+                    prevBtn.style.opacity = '1';
+                }
+            }
+            
+            if (nextBtn) {
+                nextBtn.disabled = currentSlide >= totalSlides;
+                if (currentSlide >= totalSlides) {
+                    nextBtn.style.opacity = '0.5';
+                } else {
+                    nextBtn.style.opacity = '1';
+                }
+            }
+        }
+
+        // Initialize when DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing...');
+            updateSlideCounter();
+            updateNavigationButtons();
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
