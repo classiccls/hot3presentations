@@ -14,8 +14,8 @@
         </div>
         
         <div class="navigation-controls">
-            <button class="btn btn--secondary" id="prev-btn" onclick="goToPreviousSlide()" disabled>← Poprzedni</button>
-            <button class="btn btn--secondary" id="next-btn" onclick="goToNextSlide()">Następny →</button>
+            <button class="btn btn--secondary" id="prev-btn">← Poprzedni</button>
+            <button class="btn btn--secondary" id="next-btn">Następny →</button>
         </div>
 
         <!-- Slide 1: Title Page -->
@@ -87,7 +87,7 @@
             </div>
         </div>
 
-        <!-- Slide 3: Extended Team History -->
+        <!-- Slide 3: Enhanced Team History with Board Game Images -->
         <div class="slide" id="slide-3">
             <div class="slide-content">
                 <h2>Historia Zespołu</h2>
@@ -122,28 +122,70 @@
                         <div class="game-projects">
                             <div class="game-project">
                                 <h4>DiceCraft</h4>
-                                <div class="game-image-placeholder">
-                                    <p>📷 Załącz: dice_1.jpg, dice_2.jpg</p>
+                                <div class="game-images">
+                                    <div class="game-photo-placeholder">
+                                        <span class="placeholder-text">📸 dice_1.jpg</span>
+                                        <div class="placeholder-description">Plansza hexagonalna z kostkami</div>
+                                    </div>
+                                    <div class="game-photo-placeholder">
+                                        <span class="placeholder-text">📸 dice_2.jpg</span>
+                                        <div class="placeholder-description">Szczegół mechanik kostek</div>
+                                    </div>
                                 </div>
-                                <p>Innowacyjna gra wykorzystująca system kostek z unikalnymi mechanikami kombinacji. Z każdą iteracją rozwijałem umiejętności projektowania mechanik i równoważenia rozgrywki.</p>
+                                <p><strong>Strategiczna gra planszowa z kostkami na hexagonalnej planszy.</strong> Innowacyjna gra wykorzystująca system kostek z unikalnymi mechanikami kombinacji. Z każdą iteracją rozwijałem umiejętności projektowania mechanik i równoważenia rozgrywki.</p>
                             </div>
                             
                             <div class="game-project">
                                 <h4>Necro Chess</h4>
-                                <div class="game-image-placeholder">
-                                    <p>📷 Załącz: necro_1.jpg, necro_2.jpg</p>
+                                <div class="game-images">
+                                    <div class="game-photo-placeholder">
+                                        <span class="placeholder-text">📸 necro_1.jpg</span>
+                                        <div class="placeholder-description">Plansza z figurami fantasy</div>
+                                    </div>
+                                    <div class="game-photo-placeholder">
+                                        <span class="placeholder-text">📸 necro_2.jpg</span>
+                                        <div class="placeholder-description">Unikalne figury nekromancji</div>
+                                    </div>
                                 </div>
-                                <p>Unikalne podejście do klasycznej gry w szachy z elementami fantasy. Projekt wymagał głębokiego zrozumienia strategii i taktyki gier.</p>
+                                <p><strong>Taktyczna gra planszowa z elementami fantasy i nekromancji.</strong> Unikalne podejście do klasycznej gry w szachy z elementami fantasy. Projekt wymagał głębokiego zrozumienia strategii i taktyki gier.</p>
                             </div>
                         </div>
                         
                         <p><strong>Rozwój przez prezentacje:</strong> Gry prezentowałem najpierw wśród znajomych, później na <strong>Kole Gier Planszowych Politechniki Białostockiej</strong>. Z każdą kolejną grą odbiór był coraz lepszy, a entuzjazm graczy większy.</p>
                     </div>
+
+                    <div class="history-section board-to-digital-transition">
+                        <h3>🎮 Przejście od Planszówek do Gier Komputerowych</h3>
+                        <p>Po pracy z planszowkami doszedłem do wniosku, że planszówkę jest łatwiej zrobić, ale trudniej wydać, podczas gdy gry komputerowe są trudniejsze do stworzenia, ale znacznie łatwiej wydać i dystrybuować.</p>
+                        
+                        <div class="transition-comparison">
+                            <div class="comparison-item">
+                                <h5>🎲 Gry Planszowe</h5>
+                                <ul>
+                                    <li><strong>Tworzenie:</strong> Łatwiejsze - karton, plastik, druk</li>
+                                    <li><strong>Dystrybucja:</strong> Trudniejsza - fizyczne ograniczenia</li>
+                                    <li><strong>Koszty:</strong> Produkcja, magazynowanie, wysyłka</li>
+                                    <li><strong>Zasięg:</strong> Ograniczony geograficznie</li>
+                                </ul>
+                            </div>
+                            <div class="comparison-item">
+                                <h5>💻 Gry Komputerowe</h5>
+                                <ul>
+                                    <li><strong>Tworzenie:</strong> Trudniejsze - programowanie, grafiki</li>
+                                    <li><strong>Dystrybucja:</strong> Łatwiejsza - cyfrowa, instant</li>
+                                    <li><strong>Koszty:</strong> Brak fizycznych ograniczeń</li>
+                                    <li><strong>Zasięg:</strong> Globalny bez granic</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p class="transition-conclusion"><strong>Dzięki cyfrowej dystrybucji możemy dotrzeć do graczy na całym świecie bez fizycznych ograniczeń. To skłoniło nas do skupienia się na grach komputerowych jako głównym kierunku rozwoju naszego startupu.</strong></p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 4: NEW - Startup GameDev Vision -->
+        <!-- Slide 4: Enhanced Startup Vision with Polish Market Forecasts -->
         <div class="slide" id="slide-4">
             <div class="slide-content">
                 <h2>🚀 Nasza Wizja: Startup GameDevowy Nowej Generacji</h2>
@@ -175,7 +217,7 @@
                         </div>
 
                         <div class="fact-section poland">
-                            <h4>🇵🇱 Polski GameDev:</h4>
+                            <h4>🇵🇱 Polski GameDev - Obecny Stan:</h4>
                             <div class="stats-showcase">
                                 <div class="stat-highlight info">
                                     <span class="stat-number">494 firmy</span>
@@ -190,8 +232,30 @@
                                     <span class="stat-label">więcej eksportujemy niż importujemy</span>
                                 </div>
                                 <div class="stat-highlight warning">
-                                    <span class="stat-number">20+ mln</span>
-                                    <span class="stat-label">graczy w Polsce</span>
+                                    <span class="stat-number">97%</span>
+                                    <span class="stat-label">produkcji na eksport!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fact-section poland-forecast">
+                            <h4>📈 Prognozy rozwoju Polski (2025-2030):</h4>
+                            <div class="stats-showcase">
+                                <div class="stat-highlight primary">
+                                    <span class="stat-number">467,07 mln USD</span>
+                                    <span class="stat-label">Rynek mobilny do 2030 (CAGR 7,26%)</span>
+                                </div>
+                                <div class="stat-highlight success">
+                                    <span class="stat-number">2,86 mld USD</span>
+                                    <span class="stat-label">Całkowity rynek gier do 2030 (CAGR 6,56%)</span>
+                                </div>
+                                <div class="stat-highlight warning">
+                                    <span class="stat-number">7,1 mln</span>
+                                    <span class="stat-label">Użytkowników mobile do 2030</span>
+                                </div>
+                                <div class="stat-highlight info">
+                                    <span class="stat-number">15,6% → 18,4%</span>
+                                    <span class="stat-label">Penetracja (2025 → 2030)</span>
                                 </div>
                             </div>
                         </div>
@@ -254,77 +318,127 @@
             </div>
         </div>
 
-        <!-- Slide 5: Market Data & Technology (previously slide 4) -->
+        <!-- Slide 5: Enhanced Game Engine Evolution & Market Data -->
         <div class="slide" id="slide-5">
             <div class="slide-content">
-                <h2>Rynek Indie Games: Liczby i Fakty</h2>
+                <h2>🛠️ Rewolucja w Dostępności Narzędzi Game Dev</h2>
                 
                 <div class="market-stats">
+                    <div class="stat-section engine-evolution">
+                        <h3>📊 Dramatyczny Spadek Kosztów Tworzenia Gier</h3>
+                        
+                        <div class="engine-evolution-content">
+                            <div class="cost-comparison">
+                                <h4>💰 Ewolucja Kosztów Silników Gier:</h4>
+                                <div class="cost-timeline">
+                                    <div class="timeline-item">
+                                        <h5>🕰️ Wcześniej (przed 2015):</h5>
+                                        <ul>
+                                            <li><strong>Unity:</strong> Płatne od pierwszego dolara przychodu</li>
+                                            <li><strong>Unreal:</strong> Wysokie licencje + royalty</li>
+                                            <li><strong>Alternatywy:</strong> Bardzo drogie lub nieistniejące</li>
+                                            <li><strong>Bariera wejścia:</strong> Dziesiątki tysięcy dolarów</li>
+                                        </ul>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <h5>🚀 Teraz (2024):</h5>
+                                        <ul>
+                                            <li><strong>Unity:</strong> Darmowe do 200k USD (wzrost z 100k w 2023)</li>
+                                            <li><strong>Unity Pro:</strong> $2,040/rok/seat powyżej limitu</li>
+                                            <li><strong>Unreal:</strong> Darmowy do 1M USD, potem 5% royalty</li>
+                                            <li><strong>Godot:</strong> Całkowicie darmowy i open-source</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="democratization-impact">
+                                    <h5>🎯 Efekt Democratyzacji:</h5>
+                                    <div class="impact-stats">
+                                        <div class="impact-item highlight">
+                                            <span class="impact-number">90%+</span>
+                                            <span class="impact-label">Spadek kosztów w ciągu dekady</span>
+                                        </div>
+                                        <div class="impact-item success">
+                                            <span class="impact-number">Bariery wejścia</span>
+                                            <span class="impact-label">drastycznie obniżone</span>
+                                        </div>
+                                        <div class="impact-item info">
+                                            <span class="impact-number">Każdy może</span>
+                                            <span class="impact-label">zacząć tworzyć gry</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="stat-section">
-                        <h3>📈 Eksplozywny Wzrost Rynku Indie</h3>
-                        <div class="stats-grid">
-                            <div class="stat-box highlight">
-                                <h4>4,85 mld USD</h4>
-                                <p>Wartość rynku gier indie w 2024</p>
+                        <h3>📈 Aktualny Udział Rynkowy Silników (Steam 2024)</h3>
+                        <div class="engine-stats">
+                            <div class="engine-item highlight">
+                                <strong>Unity: 51%</strong> wszystkich gier na Steam
                             </div>
-                            <div class="stat-box highlight">
-                                <h4>9,55 mld USD</h4>
-                                <p>Prognoza na 2030 rok</p>
+                            <div class="engine-item success">
+                                <strong>Unreal Engine: 28%</strong> udziału rynkowego
                             </div>
-                            <div class="stat-box success">
-                                <h4>8,5% CAGR</h4>
-                                <p>Roczny wskaźnik wzrostu</p>
+                            <div class="engine-item warning">
+                                <strong>Godot: 5%</strong> (szybki wzrost po kontrowersjach Unity)
+                            </div>
+                            <div class="engine-item info">
+                                <strong>Własne silniki:</strong> Spadek z 71% (2012) do 13% (2024)
                             </div>
                         </div>
                         
-                        <h4>🏆 Przykłady Spektakularnych Sukcesów:</h4>
-                        <ul>
-                            <li><strong>Slay the Spire:</strong> Ponad 66 mln USD przychodów</li>
-                            <li><strong>Vampire Survivors:</strong> 20+ mln USD przy minimalnych kosztach (6+ mln kopii)</li>
-                            <li>Oba tytuły stworzone przez małe zespoły indie</li>
-                        </ul>
-                    </div>
-
-                    <div class="stat-section">
-                        <h3>🇵🇱 Rynek Polski - Ogromny Potencjał</h3>
-                        <div class="poland-stats">
-                            <div class="stat-box">
-                                <h4>5,94 mln</h4>
-                                <p>Użytkowników gier mobilnych w Polsce (2024)</p>
-                            </div>
-                            <div class="stat-box">
-                                <h4>91%</h4>
-                                <p>Penetracja smartfonów w grupie 15-29 lat</p>
-                            </div>
-                            <div class="stat-box warning">
-                                <h4>Brak konkurencji</h4>
-                                <p>w Polsce wschodniej</p>
+                        <div class="market-context">
+                            <h4>💡 Kontekst Rynkowy Indie Games:</h4>
+                            <div class="stats-grid">
+                                <div class="stat-box highlight">
+                                    <h4>4,85 mld USD</h4>
+                                    <p>Wartość rynku gier indie w 2024</p>
+                                </div>
+                                <div class="stat-box success">
+                                    <h4>9,55 mld USD</h4>
+                                    <p>Prognoza na 2030 rok</p>
+                                </div>
+                                <div class="stat-box warning">
+                                    <h4>8,5% CAGR</h4>
+                                    <p>Roczny wskaźnik wzrostu</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="stat-section">
-                        <h3>🛠️ Rewolucja Technologiczna</h3>
-                        <div class="tech-stats">
-                            <h4>Silniki gier na Steam (2024):</h4>
-                            <ul>
-                                <li><strong>Unity:</strong> 51% wszystkich gier</li>
-                                <li><strong>Unreal Engine:</strong> 28% udziału</li>
-                                <li><strong>Godot:</strong> 5% (darmowy i rosnący)</li>
-                                <li>Spadek silników własnościowych: z 71% (2012) do 13% (2024)</li>
-                            </ul>
-                            
-                            <div class="ai-revolution">
-                                <h4>🤖 Rewolucja AI w Game Dev:</h4>
-                                <p><strong>62% deweloperów</strong> już wykorzystuje narzędzia AI w produkcji (Unity Report 2024). Nigdy nie było tak łatwo i tanio tworzyć gry!</p>
+                    <div class="stat-section ai-revolution">
+                        <h3>🤖 Rewolucja AI w Game Development</h3>
+                        <div class="ai-stats">
+                            <div class="ai-item primary">
+                                <h4>62% deweloperów</h4>
+                                <p>już wykorzystuje narzędzia AI w produkcji (Unity Report 2024)</p>
                             </div>
+                            <div class="ai-item success">
+                                <h4>Narzędzia AI:</h4>
+                                <p>Generowanie grafik, pisanie kodu, tworzenie muzyki, optymalizacja</p>
+                            </div>
+                            <div class="ai-item info">
+                                <h4>Efekt:</h4>
+                                <p>Nigdy nie było tak łatwo i tanio tworzyć gry wysokiej jakości!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="success-examples">
+                            <h4>🏆 Przykłady Spektakularnych Sukcesów Indie:</h4>
+                            <ul>
+                                <li><strong>Slay the Spire:</strong> Ponad 66 mln USD przychodów (mały zespół)</li>
+                                <li><strong>Vampire Survivors:</strong> 20+ mln USD przy minimalnych kosztach</li>
+                                <li><strong>Sekret:</strong> Wykorzystanie dostępnych narzędzi + kreatywność</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 6: Employment & Social Impact (previously slide 5) -->
+        <!-- Slide 6: Employment & Social Impact -->
         <div class="slide" id="slide-6">
             <div class="slide-content">
                 <h2>Miejsca Pracy i Wpływ Społeczny</h2>
@@ -390,7 +504,7 @@
             </div>
         </div>
 
-        <!-- Slide 7: Problem of Predatory Gaming (previously slide 6) -->
+        <!-- Slide 7: Problem of Predatory Gaming -->
         <div class="slide" id="slide-7">
             <div class="slide-content">
                 <h2>Problem Gier Predatory vs. Nasza Filozofia</h2>
@@ -454,7 +568,7 @@
             </div>
         </div>
 
-        <!-- Slide 8: Polish Culture & Global Market (previously slide 7) -->
+        <!-- Slide 8: Polish Culture & Global Market -->
         <div class="slide" id="slide-8">
             <div class="slide-content">
                 <h2>Polska Kultura na Świat</h2>
@@ -525,7 +639,7 @@
             </div>
         </div>
 
-        <!-- Slide 9: Enhanced First Product (previously slide 8) -->
+        <!-- Slide 9: Enhanced "The Dungeon" with Community Features -->
         <div class="slide" id="slide-9">
             <div class="slide-content">
                 <h2>Pierwszy Produkt - "The Dungeon"</h2>
@@ -581,6 +695,50 @@
                         </div>
                     </div>
 
+                    <div class="community-features">
+                        <h3>🏆 Aspekt Społecznościowy - Konkurencja i Community</h3>
+                        
+                        <div class="community-grid">
+                            <div class="community-item highlight">
+                                <h4>🥇 Globalne Leaderboardy</h4>
+                                <p>System rankingowy pozwalający graczom z całego świata <strong>rywalizować o najlepsze wyniki</strong> na podstawie szybkości i skuteczności przejścia przez lochy.</p>
+                            </div>
+                            <div class="community-item">
+                                <h4>⚖️ Uczciwa Rywalizacja</h4>
+                                <p>Ranking oparty wyłącznie na umiejętnościach - <strong>szybkość przejścia</strong> i <strong>efektywność użycia przedmiotów</strong>. Bez elementów pay-to-win.</p>
+                            </div>
+                            <div class="community-item">
+                                <h4>📊 Transparentne Metryki</h4>
+                                <p>Detailowane statystyki: <strong>czas przejścia, liczba ruchów, efektywność kombinacji</strong> przedmiotów, procent wykorzystania zasobów.</p>
+                            </div>
+                            <div class="community-item">
+                                <h4>💬 Społeczność Graczy</h4>
+                                <p>Zintegrowane forum dyskusyjne, <strong>wymiana strategii</strong>, profile graczy z historią osiągnięć i ulubionymi kombinacjami.</p>
+                            </div>
+                            <div class="community-item">
+                                <h4>🎯 Regularne Eventy</h4>
+                                <p><strong>Cotygodniowe wyzwania</strong> tematyczne z unikalnymi nagrodami kosmetycznymi - nowe skórki przedmiotów, efekty wizualne.</p>
+                            </div>
+                            <div class="community-item highlight">
+                                <h4>🚫 Bez Pay-to-Win</h4>
+                                <p><strong>Wszystkie nagrody czysto kosmetyczne</strong> - nie wpływają na rozgrywkę. <strong>Gracze będą mogli konkurować ze sobą na uczciwych warunkach</strong> o najlepszy wynik.</p>
+                            </div>
+                        </div>
+
+                        <div class="competitive-example">
+                            <h4>🏁 Przykład Systemu Konkurencji:</h4>
+                            <div class="competition-scenario">
+                                <p><strong>Wyzwanie Tygodnia:</strong> "Minimalistyczny Wojownik"</p>
+                                <ul>
+                                    <li>Przejdź przez loch używając maksymalnie 10 przedmiotów</li>
+                                    <li>Punkty za szybkość + bonus za efektywność</li>
+                                    <li>Nagroda: Złoty skin dla zwycięskiej kombinacji</li>
+                                    <li>Wszyscy uczestnicy: Specjalny emote do chatu</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="design-philosophy">
                         <h3>🎯 Filozofia Designu</h3>
                         <div class="philosophy-points">
@@ -611,13 +769,14 @@
                             <li><strong>Łatwe testowanie</strong> - mechaniki można testować na papierze</li>
                             <li><strong>Skalowalna zawartość</strong> - łatwo dodawać nowe przedmioty</li>
                             <li><strong>Silna replayability</strong> - każda rozgrywka inna</li>
+                            <li><strong>Naturalny community building</strong> - konkurencja buduje zaangażowanie</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 10: Enhanced Future Plans & Summary (previously slide 9) -->
+        <!-- Slide 10: Future Plans & Summary -->
         <div class="slide" id="slide-10">
             <div class="slide-content">
                 <h2>Plany Przyszłości i Podsumowanie</h2>
@@ -727,92 +886,6 @@
         </div>
     </div>
 
-    <script>
-        // Global variables for slide management
-        let currentSlide = 1;
-        const totalSlides = 10;
-
-        // Global functions for inline onclick handlers
-        function goToNextSlide() {
-            console.log('Next slide function called');
-            if (currentSlide < totalSlides) {
-                showSlide(currentSlide + 1);
-            }
-        }
-
-        function goToPreviousSlide() {
-            console.log('Previous slide function called');
-            if (currentSlide > 1) {
-                showSlide(currentSlide - 1);
-            }
-        }
-
-        function showSlide(slideNumber) {
-            console.log('Showing slide:', slideNumber);
-            
-            if (slideNumber < 1 || slideNumber > totalSlides) {
-                return;
-            }
-
-            // Hide all slides
-            const slides = document.querySelectorAll('.slide');
-            slides.forEach(slide => {
-                slide.classList.remove('active');
-            });
-
-            // Show current slide
-            const targetSlide = document.getElementById(`slide-${slideNumber}`);
-            if (targetSlide) {
-                targetSlide.classList.add('active');
-            }
-
-            currentSlide = slideNumber;
-            updateSlideCounter();
-            updateNavigationButtons();
-        }
-
-        function updateSlideCounter() {
-            const currentSlideDisplay = document.getElementById('current-slide');
-            const totalSlidesDisplay = document.getElementById('total-slides');
-            
-            if (currentSlideDisplay) {
-                currentSlideDisplay.textContent = currentSlide;
-            }
-            if (totalSlidesDisplay) {
-                totalSlidesDisplay.textContent = totalSlides;
-            }
-        }
-
-        function updateNavigationButtons() {
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            
-            if (prevBtn) {
-                prevBtn.disabled = currentSlide <= 1;
-                if (currentSlide <= 1) {
-                    prevBtn.style.opacity = '0.5';
-                } else {
-                    prevBtn.style.opacity = '1';
-                }
-            }
-            
-            if (nextBtn) {
-                nextBtn.disabled = currentSlide >= totalSlides;
-                if (currentSlide >= totalSlides) {
-                    nextBtn.style.opacity = '0.5';
-                } else {
-                    nextBtn.style.opacity = '1';
-                }
-            }
-        }
-
-        // Initialize when DOM loads
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM loaded, initializing...');
-            updateSlideCounter();
-            updateNavigationButtons();
-        });
-    </script>
     <script src="app.js"></script>
 </body>
 </html>

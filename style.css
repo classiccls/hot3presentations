@@ -738,7 +738,7 @@ select.form-control {
 }
 
 /* END PERPLEXITY DESIGN SYSTEM */
-/* Custom styles for the expanded presentation with NEW Vision Slide */
+/* Custom styles for the enhanced presentation with all updates */
 .presentation-container {
   width: 100%;
   height: 100vh;
@@ -1004,6 +1004,7 @@ select.form-control {
 .history-section:nth-child(1) { background: var(--color-bg-1); }
 .history-section:nth-child(2) { background: var(--color-bg-2); }
 .history-section:nth-child(3) { background: var(--color-bg-3); }
+.history-section:nth-child(4) { background: var(--color-bg-5); }
 
 .history-section h3 {
   color: var(--color-text);
@@ -1039,6 +1040,7 @@ select.form-control {
   left: 0;
 }
 
+/* Game Projects with Image Placeholders */
 .game-projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1064,18 +1066,109 @@ select.form-control {
   line-height: 1.3;
 }
 
-.game-image-placeholder {
-  background: var(--color-bg-6);
-  padding: var(--space-12);
-  border-radius: var(--radius-base);
-  text-align: center;
+/* Game Image Placeholders Styling */
+.game-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
   margin: var(--space-8) 0;
-  border: 2px dashed var(--color-border);
-  font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
 }
 
-/* NEW SLIDE 4: Vision Styles */
+.game-photo-placeholder {
+  width: 100%;
+  height: 120px;
+  background: var(--color-bg-2);
+  border-radius: var(--radius-base);
+  border: 2px dashed var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: var(--space-8);
+  transition: transform var(--duration-normal) var(--ease-standard);
+}
+
+.game-photo-placeholder:hover {
+  transform: scale(1.02);
+  border-color: var(--color-primary);
+}
+
+.placeholder-text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.placeholder-description {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+/* Board to Digital Transition Section */
+.board-to-digital-transition {
+  background: var(--color-bg-6) !important;
+  border: 2px solid var(--color-primary) !important;
+}
+
+.transition-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  margin: var(--space-12) 0;
+}
+
+.comparison-item {
+  background: var(--color-surface);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+}
+
+.comparison-item h5 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.comparison-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comparison-item li {
+  padding: var(--space-4) 0 var(--space-4) var(--space-16);
+  position: relative;
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-4);
+}
+
+.comparison-item li::before {
+  content: "•";
+  color: var(--color-primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.transition-conclusion {
+  background: var(--color-surface);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  border-left: 4px solid var(--color-success);
+  margin-top: var(--space-12);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+}
+
+/* Enhanced Vision Slide Styles */
 .vision-intro {
   background: var(--color-bg-1);
   padding: var(--space-16);
@@ -1121,6 +1214,11 @@ select.form-control {
 .fact-section.poland { 
   background: var(--color-bg-2); 
   border: 2px solid var(--color-warning);
+}
+
+.fact-section.poland-forecast {
+  background: var(--color-bg-3);
+  border: 2px solid var(--color-success);
 }
 
 .fact-section.challenges { 
@@ -1292,7 +1390,7 @@ select.form-control {
   margin: 0;
 }
 
-/* Market Statistics - COMPACT */
+/* Enhanced Market Statistics with Engine Evolution */
 .market-stats {
   display: flex;
   flex-direction: column;
@@ -1313,6 +1411,11 @@ select.form-control {
 .stat-section:nth-child(1) { background: var(--color-bg-1); }
 .stat-section:nth-child(2) { background: var(--color-bg-2); }
 .stat-section:nth-child(3) { background: var(--color-bg-3); }
+
+.engine-evolution {
+  background: var(--color-bg-5) !important;
+  border: 2px solid var(--color-primary) !important;
+}
 
 .stats-grid {
   display: grid;
@@ -1385,53 +1488,219 @@ select.form-control {
   color: var(--color-error);
 }
 
-.poland-stats {
+/* Game Engine Evolution Specific Styles */
+.engine-evolution-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.engine-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-12);
-  margin-top: var(--space-12);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin: var(--space-8) 0;
 }
 
-.tech-stats h4 {
+.engine-item {
+  background: var(--color-surface);
+  padding: var(--space-8);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.engine-item.highlight {
+  border: 2px solid var(--color-primary);
+}
+
+.engine-item.success {
+  border: 2px solid var(--color-success);
+}
+
+.engine-item.warning {
+  border: 2px solid var(--color-warning);
+}
+
+.engine-item.info {
+  border: 2px solid var(--color-info);
+}
+
+.cost-comparison {
+  background: var(--color-surface);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+}
+
+.cost-timeline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  margin: var(--space-12) 0;
+}
+
+.timeline-item {
+  background: var(--color-bg-1);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+}
+
+.timeline-item h5 {
+  color: var(--color-primary);
   margin-bottom: var(--space-8);
-  color: var(--color-text);
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
 }
 
-.tech-stats ul {
+.timeline-item ul {
   list-style: none;
   padding: 0;
 }
 
-.tech-stats li {
+.timeline-item li {
   padding: var(--space-2) 0 var(--space-2) var(--space-16);
   position: relative;
+  font-size: var(--font-size-xs);
   margin-bottom: var(--space-4);
-  font-size: var(--font-size-sm);
 }
 
-.tech-stats li::before {
+.timeline-item li::before {
   content: "⚙️";
   position: absolute;
   left: 0;
   font-size: var(--font-size-xs);
 }
 
-.ai-revolution {
-  background: var(--color-bg-5);
+.democratization-impact {
+  background: var(--color-bg-3);
   padding: var(--space-12);
   border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
   margin-top: var(--space-12);
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin: var(--space-8) 0;
+}
+
+.impact-item {
+  background: var(--color-surface);
+  padding: var(--space-8);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.impact-item.highlight {
   border: 2px solid var(--color-primary);
 }
 
-.ai-revolution h4 {
-  font-size: var(--font-size-md);
-  margin-bottom: var(--space-6);
+.impact-item.success {
+  border: 2px solid var(--color-success);
 }
 
-.ai-revolution p {
+.impact-item.info {
+  border: 2px solid var(--color-info);
+}
+
+.impact-number {
+  display: block;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.impact-label {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.market-context {
+  margin-top: var(--space-16);
+}
+
+.ai-revolution {
+  background: var(--color-bg-5) !important;
+  border: 2px solid var(--color-primary) !important;
+}
+
+.ai-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-12);
+  margin: var(--space-12) 0;
+}
+
+.ai-item {
+  background: var(--color-surface);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.ai-item.primary {
+  border: 2px solid var(--color-primary);
+}
+
+.ai-item.success {
+  border: 2px solid var(--color-success);
+}
+
+.ai-item.info {
+  border: 2px solid var(--color-info);
+}
+
+.ai-item h4 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-md);
+}
+
+.ai-item p {
   font-size: var(--font-size-sm);
+}
+
+.success-examples {
+  background: var(--color-surface);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+  margin-top: var(--space-16);
+}
+
+.success-examples h4 {
+  color: var(--color-success);
+  margin-bottom: var(--space-8);
+}
+
+.success-examples ul {
+  list-style: none;
+  padding: 0;
+}
+
+.success-examples li {
+  padding: var(--space-4) 0 var(--space-4) var(--space-16);
+  position: relative;
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-4);
+}
+
+.success-examples li::before {
+  content: "🏆";
+  position: absolute;
+  left: 0;
 }
 
 /* Employment Section - COMPACT */
@@ -1781,7 +2050,7 @@ select.form-control {
   left: 0;
 }
 
-/* Game Overview Enhanced - FIXED */
+/* Enhanced Game Overview with Community Features */
 .game-detailed-overview {
   display: flex;
   flex-direction: column;
@@ -1880,6 +2149,101 @@ select.form-control {
   border: 2px solid var(--color-success);
   margin-top: var(--space-12);
   font-size: var(--font-size-sm);
+}
+
+/* Community Features Styling */
+.community-features {
+  background: var(--color-bg-6);
+  padding: var(--space-16);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-warning);
+  flex-shrink: 0;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-12);
+  margin: var(--space-12) 0;
+}
+
+.community-item {
+  background: var(--color-surface);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+  transition: transform var(--duration-normal) var(--ease-standard);
+  cursor: pointer;
+}
+
+.community-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.community-item.highlight {
+  border: 2px solid var(--color-primary);
+  background: var(--color-bg-1);
+}
+
+.community-item h4 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.community-item p {
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+}
+
+.competitive-example {
+  background: var(--color-surface);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+  margin-top: var(--space-12);
+}
+
+.competitive-example h4 {
+  color: var(--color-warning);
+  margin-bottom: var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.competition-scenario {
+  background: var(--color-bg-2);
+  padding: var(--space-10);
+  border-radius: var(--radius-base);
+  border-left: 4px solid var(--color-warning);
+}
+
+.competition-scenario p {
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-8);
+}
+
+.competition-scenario ul {
+  list-style: none;
+  padding: 0;
+}
+
+.competition-scenario li {
+  padding: var(--space-2) 0 var(--space-2) var(--space-16);
+  position: relative;
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-4);
+}
+
+.competition-scenario li::before {
+  content: "🏆";
+  position: absolute;
+  left: 0;
 }
 
 .design-philosophy {
@@ -2163,15 +2527,19 @@ select.form-control {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .stats-grid,
-  .poland-stats,
   .education-stats,
-  .stats-showcase {
+  .stats-showcase,
+  .engine-stats,
+  .cost-timeline,
+  .impact-stats {
     grid-template-columns: repeat(2, 1fr);
   }
   
   .concept-grid,
   .philosophy-points,
-  .solution-principles {
+  .solution-principles,
+  .community-grid,
+  .transition-comparison {
     grid-template-columns: 1fr;
   }
   
@@ -2202,7 +2570,6 @@ select.form-control {
   
   .team-grid,
   .game-projects,
-  .poland-stats,
   .education-stats,
   .strategy-points,
   .opportunity-grid,
@@ -2211,7 +2578,12 @@ select.form-control {
   .stats-grid,
   .predatory-stats,
   .stats-showcase,
-  .tech-stats {
+  .tech-stats,
+  .engine-stats,
+  .cost-timeline,
+  .impact-stats,
+  .community-grid,
+  .transition-comparison {
     grid-template-columns: 1fr;
   }
   
@@ -2246,6 +2618,14 @@ select.form-control {
   .item-card {
     min-width: 120px;
     max-width: none;
+  }
+
+  .game-images {
+    grid-template-columns: 1fr;
+  }
+
+  .game-photo-placeholder {
+    height: 100px;
   }
 }
 

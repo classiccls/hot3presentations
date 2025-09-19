@@ -1,7 +1,7 @@
 class PresentationApp {
     constructor() {
         this.currentSlide = 1;
-        this.totalSlides = 10; // Updated for expanded presentation with new vision slide
+        this.totalSlides = 10; // Updated for expanded presentation with all new features
         this.slides = document.querySelectorAll('.slide');
         this.currentSlideDisplay = document.getElementById('current-slide');
         this.totalSlidesDisplay = document.getElementById('total-slides');
@@ -14,7 +14,7 @@ class PresentationApp {
     }
     
     init() {
-        console.log('Initializing Enhanced Presentation App...');
+        console.log('Initializing Enhanced Game Dev Presentation App...');
         console.log('Total slides:', this.totalSlides);
         
         // Set initial state
@@ -51,7 +51,10 @@ class PresentationApp {
         // Add progress indicator
         this.createProgressIndicator();
         
-        console.log('Enhanced PresentationApp initialized successfully');
+        // Add slide-specific enhancements
+        this.enhanceSlides();
+        
+        console.log('Enhanced Game Dev PresentationApp initialized successfully');
     }
     
     handleKeydown(e) {
@@ -230,6 +233,9 @@ class PresentationApp {
             slideContent.scrollTop = 0;
         }
         
+        // Trigger slide-specific enhancements
+        this.triggerSlideEnhancements(slideNumber);
+        
         // Trigger custom event for external listeners
         const slideChangeEvent = new CustomEvent('slideChange', {
             detail: { 
@@ -341,6 +347,354 @@ class PresentationApp {
         if (progressBar) {
             const progress = (this.currentSlide / this.totalSlides) * 100;
             progressBar.style.width = `${progress}%`;
+        }
+    }
+    
+    enhanceSlides() {
+        // Add hover effects to statistics
+        this.addStatisticsAnimations();
+        
+        // Add image lazy loading and error handling
+        this.addImageEnhancements();
+        
+        // Add interactive elements to community features
+        this.addCommunityInteractions();
+        
+        // Add enhanced transitions for game mechanics
+        this.addGameMechanicsAnimations();
+    }
+    
+    addStatisticsAnimations() {
+        const statBoxes = document.querySelectorAll('.stat-box, .stat-highlight, .community-item');
+        
+        statBoxes.forEach((box, index) => {
+            // Add staggered entrance animation
+            box.style.animation = `fadeInUp 0.6s ease-out ${index * 0.1}s both`;
+            
+            // Add hover interaction
+            box.addEventListener('mouseenter', () => {
+                box.style.transform = 'translateY(-3px) scale(1.02)';
+                box.style.transition = 'all 0.3s ease';
+            });
+            
+            box.addEventListener('mouseleave', () => {
+                box.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    }
+    
+    addImageEnhancements() {
+        const gamePhotos = document.querySelectorAll('.game-photo');
+        
+        gamePhotos.forEach(img => {
+            // Add loading placeholder
+            img.style.backgroundColor = 'var(--color-bg-2)';
+            
+            // Handle image load success
+            img.addEventListener('load', () => {
+                img.style.opacity = '1';
+                img.style.transition = 'opacity 0.5s ease';
+            });
+            
+            // Handle image load error
+            img.addEventListener('error', () => {
+                img.style.display = 'none';
+                const placeholder = document.createElement('div');
+                placeholder.className = 'image-placeholder';
+                placeholder.style.cssText = `
+                    width: 100%;
+                    height: 120px;
+                    background: var(--color-bg-2);
+                    border-radius: var(--radius-base);
+                    border: 2px dashed var(--color-border);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: var(--font-size-xs);
+                    color: var(--color-text-secondary);
+                `;
+                placeholder.textContent = `Ładowanie: ${img.alt}`;
+                img.parentNode.insertBefore(placeholder, img);
+            });
+            
+            // Add click to enlarge functionality
+            img.addEventListener('click', () => {
+                this.showImageModal(img);
+            });
+        });
+    }
+    
+    showImageModal(img) {
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            cursor: pointer;
+        `;
+        
+        const enlargedImg = img.cloneNode();
+        enlargedImg.style.cssText = `
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        `;
+        
+        modal.appendChild(enlargedImg);
+        document.body.appendChild(modal);
+        
+        // Close on click or escape
+        modal.addEventListener('click', () => {
+            document.body.removeChild(modal);
+        });
+        
+        document.addEventListener('keydown', function escapeHandler(e) {
+            if (e.key === 'Escape') {
+                if (document.body.contains(modal)) {
+                    document.body.removeChild(modal);
+                }
+                document.removeEventListener('keydown', escapeHandler);
+            }
+        });
+    }
+    
+    addCommunityInteractions() {
+        const communityItems = document.querySelectorAll('.community-item');
+        
+        communityItems.forEach((item, index) => {
+            // Add click interaction for community features
+            item.addEventListener('click', () => {
+                this.showCommunityDetail(item, index);
+            });
+            
+            // Add keyboard accessibility
+            item.setAttribute('tabindex', '0');
+            item.setAttribute('role', 'button');
+            
+            item.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.showCommunityDetail(item, index);
+                }
+            });
+        });
+    }
+    
+    showCommunityDetail(item, index) {
+        const communityFeatures = [
+            {
+                title: "Globalne Leaderboardy",
+                details: "System rankingowy będzie aktualizowany w czasie rzeczywistym. Gracze będą mogli śledzić swoje postępy i porównywać się z najlepszymi na świecie.",
+                benefits: ["Motywacja do doskonalenia", "Społeczna rywalizacja", "Przejrzysty system punktowy"]
+            },
+            {
+                title: "Uczciwa Rywalizacja", 
+                details: "Ranking będzie oparty wyłącznie na umiejętnościach - szybkości przejścia i efektywności strategii. Żadnych elementów płatnych.",
+                benefits: ["Równe szanse dla wszystkich", "Nagroda za umiejętności", "Transparentne zasady"]
+            },
+            {
+                title: "Transparentne Metryki",
+                details: "Każdy gracz będzie mógł zobaczyć dokładne statystyki: czas, ruchy, wykorzystane combo, procent skuteczności.",
+                benefits: ["Analiza własnej gry", "Uczenie się od najlepszych", "Precyzyjne śledzenie postępów"]
+            },
+            {
+                title: "Społeczność Graczy",
+                details: "Zintegrowane forum z możliwością dzielenia się strategiami, tworzenia przewodników i dyskusji o taktykach.",
+                benefits: ["Wymiana doświadczeń", "Budowanie społeczności", "Wsparcie dla nowych graczy"]
+            },
+            {
+                title: "Regularne Eventy",
+                details: "Co tydzień nowe wyzwania tematyczne z unikalnymi nagrodami kosmetycznymi - nowe skórki, efekty, emotikony.",
+                benefits: ["Świeża zawartość", "Dodatkowa motywacja", "Kolekcjonerski aspekt"]
+            },
+            {
+                title: "Bez Pay-to-Win",
+                details: "Wszystkie nagrody to wyłącznie elementy kosmetyczne. Sukces zależy tylko od umiejętności gracza, nie od portfela.",
+                benefits: ["Uczciwa konkurencja", "Fokus na gameplay", "Równe szanse"]
+            }
+        ];
+        
+        const feature = communityFeatures[index % communityFeatures.length];
+        
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: var(--space-20);
+        `;
+        
+        const content = document.createElement('div');
+        content.style.cssText = `
+            background: var(--color-surface);
+            padding: var(--space-24);
+            border-radius: var(--radius-lg);
+            max-width: 600px;
+            width: 100%;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--color-primary);
+        `;
+        
+        content.innerHTML = `
+            <h3 style="color: var(--color-primary); margin-bottom: var(--space-16); display: flex; align-items: center; gap: var(--space-8);">
+                🏆 ${feature.title}
+            </h3>
+            <p style="margin-bottom: var(--space-16); line-height: 1.5; font-size: var(--font-size-sm);">
+                ${feature.details}
+            </p>
+            <div style="background: var(--color-bg-3); padding: var(--space-12); border-radius: var(--radius-base); border-left: 4px solid var(--color-success);">
+                <h4 style="color: var(--color-success); margin-bottom: var(--space-8); font-size: var(--font-size-sm);">Korzyści:</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    ${feature.benefits.map(benefit => `
+                        <li style="padding: var(--space-4) 0 var(--space-4) var(--space-16); position: relative; font-size: var(--font-size-sm);">
+                            <span style="position: absolute; left: 0; color: var(--color-success);">✓</span>
+                            ${benefit}
+                        </li>
+                    `).join('')}
+                </ul>
+            </div>
+            <button id="close-community-modal" style="
+                margin-top: var(--space-16);
+                padding: var(--space-8) var(--space-16);
+                background: var(--color-primary);
+                color: var(--color-btn-primary-text);
+                border: none;
+                border-radius: var(--radius-base);
+                cursor: pointer;
+                width: 100%;
+                font-size: var(--font-size-sm);
+            ">Zamknij</button>
+        `;
+        
+        modal.appendChild(content);
+        document.body.appendChild(modal);
+        
+        // Close handlers
+        const closeBtn = content.querySelector('#close-community-modal');
+        const closeModal = () => {
+            if (document.body.contains(modal)) {
+                document.body.removeChild(modal);
+            }
+        };
+        
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        
+        document.addEventListener('keydown', function escapeHandler(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+                document.removeEventListener('keydown', escapeHandler);
+            }
+        });
+    }
+    
+    addGameMechanicsAnimations() {
+        const itemCards = document.querySelectorAll('.item-card');
+        const synergyArrows = document.querySelectorAll('.synergy-arrow');
+        
+        // Add hover effects to item cards
+        itemCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.05) translateY(-2px)';
+                card.style.boxShadow = 'var(--shadow-lg)';
+                card.style.borderColor = 'var(--color-primary-hover)';
+                card.style.transition = 'all 0.3s ease';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1) translateY(0)';
+                card.style.boxShadow = '';
+                card.style.borderColor = 'var(--color-primary)';
+            });
+        });
+        
+        // Animate synergy arrows
+        synergyArrows.forEach((arrow, index) => {
+            arrow.style.animation = `pulse 2s ease-in-out ${index * 0.5}s infinite`;
+        });
+    }
+    
+    triggerSlideEnhancements(slideNumber) {
+        // Slide-specific enhancements
+        switch(slideNumber) {
+            case 3: // History with board games
+                this.enhanceHistorySlide();
+                break;
+            case 4: // Vision with forecasts
+                this.enhanceVisionSlide();
+                break;
+            case 5: // Market data with engine evolution
+                this.enhanceMarketSlide();
+                break;
+            case 9: // The Dungeon with community
+                this.enhanceGameSlide();
+                break;
+        }
+    }
+    
+    enhanceHistorySlide() {
+        // Add timeline animation for board game transition
+        const transitionSection = document.querySelector('.board-to-digital-transition');
+        if (transitionSection && !transitionSection.classList.contains('animated')) {
+            transitionSection.classList.add('animated');
+            transitionSection.style.animation = 'slideInUp 0.8s ease-out';
+        }
+    }
+    
+    enhanceVisionSlide() {
+        // Animate forecast statistics
+        const forecastSection = document.querySelector('.poland-forecast');
+        if (forecastSection) {
+            const statHighlights = forecastSection.querySelectorAll('.stat-highlight');
+            statHighlights.forEach((stat, index) => {
+                setTimeout(() => {
+                    stat.style.animation = 'bounceIn 0.6s ease-out';
+                }, index * 200);
+            });
+        }
+    }
+    
+    enhanceMarketSlide() {
+        // Animate engine evolution timeline
+        const costTimeline = document.querySelector('.cost-timeline');
+        if (costTimeline) {
+            const timelineItems = costTimeline.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.animation = 'slideInLeft 0.6s ease-out';
+                }, index * 300);
+            });
+        }
+    }
+    
+    enhanceGameSlide() {
+        // Animate community features grid
+        const communityGrid = document.querySelector('.community-grid');
+        if (communityGrid && !communityGrid.classList.contains('animated')) {
+            communityGrid.classList.add('animated');
+            const communityItems = communityGrid.querySelectorAll('.community-item');
+            communityItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.animation = 'fadeInUp 0.6s ease-out';
+                }, index * 150);
+            });
         }
     }
     
@@ -582,7 +936,74 @@ function updateNavigationButtons() {
 
 // Initialize the presentation when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded, initializing enhanced presentation...');
+    console.log('DOM loaded, initializing enhanced game dev presentation...');
+    
+    // Add CSS animations
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
+        }
+    `;
+    document.head.appendChild(style);
     
     // Create main presentation instance
     const presentation = new PresentationApp();
@@ -590,7 +1011,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Make presentation object globally available
     window.presentation = presentation;
     
-    // Add help overlay
+    // Add enhanced help overlay
     const helpOverlay = document.createElement('div');
     helpOverlay.id = 'help-overlay';
     helpOverlay.style.cssText = `
@@ -606,34 +1027,42 @@ document.addEventListener('DOMContentLoaded', () => {
         z-index: 1001;
         opacity: 0.9;
         transition: opacity var(--duration-normal);
-        max-width: 300px;
+        max-width: 350px;
         box-shadow: var(--shadow-md);
     `;
     
     helpOverlay.innerHTML = `
         <div style="font-weight: var(--font-weight-semibold); margin-bottom: var(--space-8); color: var(--color-primary);">
-            Skróty Klawiszowe:
+            🎮 Prezentacja Game Dev Startup
         </div>
-        <div style="display: grid; grid-template-columns: auto 1fr; gap: var(--space-4) var(--space-8); font-size: var(--font-size-xs);">
-            <strong>← →</strong> <span>Nawigacja</span>
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: var(--space-4) var(--space-8); font-size: var(--font-size-xs); margin-bottom: var(--space-8);">
+            <strong>← →</strong> <span>Nawigacja slajdów</span>
             <strong>1-9, 0</strong> <span>Bezpośredni przeskok</span>
             <strong>F</strong> <span>Pełny ekran</span>
             <strong>A</strong> <span>Auto-play</span>
             <strong>P</strong> <span>Tryb prezentera</span>
-            <strong>ESC</strong> <span>Start/Stop</span>
-            <strong>Home/End</strong> <span>Pierwszy/Ostatni</span>
+            <strong>ESC</strong> <span>Powrót na początek</span>
         </div>
-        <div style="margin-top: var(--space-12); font-size: var(--font-size-xs); color: var(--color-text-secondary);">
-            Obsługuje również: mysz, dotyk, swipe
+        <div style="font-size: var(--font-size-xs); color: var(--color-text-secondary); margin-bottom: var(--space-8);">
+            Obsługuje: mysz, dotyk, swipe, kółko myszy
         </div>
-        <div style="margin-top: var(--space-8); padding-top: var(--space-8); border-top: 1px solid var(--color-border); font-size: var(--font-size-xs); color: var(--color-success);">
-            🚀 Nowy slajd 4: Wizja Startupu!
+        <div style="background: var(--color-bg-3); padding: var(--space-8); border-radius: var(--radius-sm); border-left: 3px solid var(--color-success);">
+            <div style="font-size: var(--font-size-xs); color: var(--color-success); font-weight: var(--font-weight-semibold);">
+                ✨ NOWE FUNKCJE:
+            </div>
+            <div style="font-size: var(--font-size-xs); margin-top: var(--space-4);">
+                • Prawdziwe zdjęcia gier planszowych<br>
+                • Prognozy polskiego rynku<br>
+                • Ewolucja silników gier<br>
+                • Funkcje społecznościowe w grze<br>
+                • Interaktywne elementy community
+            </div>
         </div>
     `;
     
     document.body.appendChild(helpOverlay);
     
-    // Hide help after 7 seconds
+    // Hide help after 8 seconds
     setTimeout(() => {
         helpOverlay.style.opacity = '0';
         setTimeout(() => {
@@ -641,31 +1070,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 helpOverlay.parentNode.removeChild(helpOverlay);
             }
         }, 500);
-    }, 7000);
+    }, 8000);
     
     // Add click to show help again
     const helpButton = document.createElement('button');
-    helpButton.innerHTML = '❓';
-    helpButton.title = 'Pokaż pomoc';
+    helpButton.innerHTML = '🎮';
+    helpButton.title = 'Pokaż pomoc - Game Dev Presentation';
     helpButton.style.cssText = `
         position: fixed;
         top: var(--space-16);
         left: var(--space-16);
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
         background: var(--color-primary);
         color: var(--color-btn-primary-text);
         border: none;
         cursor: pointer;
         z-index: 1000;
-        opacity: 0.7;
+        opacity: 0.8;
         transition: all var(--duration-normal);
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: var(--font-size-lg);
+        box-shadow: var(--shadow-sm);
     `;
+    
+    helpButton.addEventListener('mouseenter', () => {
+        helpButton.style.opacity = '1';
+        helpButton.style.transform = 'scale(1.1)';
+    });
+    
+    helpButton.addEventListener('mouseleave', () => {
+        helpButton.style.opacity = '0.8';
+        helpButton.style.transform = 'scale(1)';
+    });
     
     helpButton.addEventListener('click', () => {
         // Recreate and show help overlay
@@ -682,16 +1122,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     newHelpOverlay.parentNode.removeChild(newHelpOverlay);
                 }
             }, 500);
-        }, 5000);
+        }, 6000);
     });
     
     // Show help button after help overlay disappears
     setTimeout(() => {
         document.body.appendChild(helpButton);
-    }, 8000);
+    }, 9000);
     
-    console.log('Enhanced presentation initialized successfully');
-    console.log('Available keyboard shortcuts: ←→ (navigate), F (fullscreen), A (autoplay), P (presenter), 1-9,0 (direct), ESC (reset)');
+    console.log('Enhanced Game Dev presentation initialized successfully');
+    console.log('Features: Real game images, Polish market forecasts, game engine evolution, community features');
+    console.log('Available shortcuts: ←→ (navigate), F (fullscreen), A (autoplay), P (presenter), 1-9,0 (direct), ESC (reset)');
 });
 
 // Enhanced utility functions for presentation control
@@ -725,14 +1166,14 @@ window.presentationControls = {
 
 // Add error handling for presentation
 window.addEventListener('error', (event) => {
-    console.error('Presentation error:', event.error);
+    console.error('Game Dev Presentation error:', event.error);
 });
 
 window.addEventListener('unhandledrejection', (event) => {
-    console.error('Unhandled promise rejection in presentation:', event.reason);
+    console.error('Unhandled promise rejection in game dev presentation:', event.reason);
 });
 
 // Add performance monitoring
 if ('performance' in window && 'mark' in window.performance) {
-    window.performance.mark('presentation-script-loaded');
+    window.performance.mark('game-dev-presentation-script-loaded');
 }
